@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/facn6/week6-DKA/issues"
   },
-  "homepage": "https://github.com/facn6/week6-DKA#readme"
+  "homepage": "https://github.com/facn6/week6-DKA#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "nodemon": "^1.19.1",
+    "pg": "^7.12.0"
+  }
 }
