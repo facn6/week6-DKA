@@ -1,3 +1,10 @@
+
+body{
+    font-family: Bad Script;
+background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68, 65, 67)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -7,7 +14,8 @@
   .navbar a {
     float: left;
     font-size: 16px;
-    color: white;
+    color: #ccc;
+    font-family: Bad Script;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -19,25 +27,29 @@
   }
   
   .dropdown .Cdropbtn, .dropdown .Ldropbtn {
+      
     cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #ccc;
+    font-family: Bad Script;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit;
     margin: 0;
   }
   
   .navbar a:hover, .dropdown:hover .Cdropbtn, .Cdropbtn:focus, .dropdown:hover .Ldropbtn, .Ldropbtn:focus {
-    background-color: red;
+    background-color:   Tomato;
+
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    font-family: Bad Script;
+
+    background-color: #ccc;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -53,7 +65,7 @@
   }
   
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #ccc;
   }
   
   .show {
@@ -72,3 +84,16 @@
   .container {
     padding: 2px 16px;
   }
+  h4{
+      color:#ccc
+  }
+
+  [type="date"] {
+  background:#ccc url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}

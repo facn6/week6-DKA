@@ -7,14 +7,14 @@ function getLocation() {
   
   window.onclick = function(e) {
     if (!e.target.matches('.Cdropbtn')) {
-    var myDropdown = document.getElementById("catagoryDropDown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
+    var catagoryDropDown = document.getElementById("catagoryDropDown");
+      if (catagoryDropDown.classList.contains('show')) {
+        catagoryDropDown.classList.remove('show');
       }
-    }else if(e.target.matches('.Ldropbtn')){
-        var myDropdown = document.getElementById("locationDropDown");
-        if (myDropdown.classList.contains('show')) {
-          myDropdown.classList.remove('show');
+    }else if(!e.target.matches('.Ldropbtn')){
+        var locationDropDown = document.getElementById("locationDropDown");
+        if (locationDropDown.classList.contains('show')) {
+            locationDropDown.classList.remove('show');
         }
     }
   }
