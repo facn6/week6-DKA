@@ -6,7 +6,7 @@ if(!process.env.DB_URL)
 throw new Error('Environment variable DB_URL missing');
 
 const params = url.parse(process.env.DB_URL);
-const [username, password] = params.auth.split(':'); 
+const [username, password] = params.auth.split(':');
 console.log("Before parse:", process.env.DB_URL);
 console.log("Params:", params);
 

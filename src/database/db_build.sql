@@ -19,8 +19,15 @@ CREATE TABLE "location" (
 "name" varchar(100) NOT NULL
 );
 
--- ALTER TABLE "event" ADD FOREIGN KEY ("category_id") REFERENCES "category" ("id");
---
--- ALTER TABLE "event" ADD FOREIGN KEY ("location_id") REFERENCES "location" ("id");
+
+
+
+INSERT INTO category(name) VALUES
+('meeting'),
+('party'),
+('research'),
+('presentation'),
+('workshop');
+
 
 COMMIT;
