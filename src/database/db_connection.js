@@ -1,14 +1,12 @@
 const {Pool} = require('pg');
 const url = require('url');
-require('env2')('./src/config.env');
+require('env2')('../config.env');
 
 if(!process.env.DB_URL)
-throw new Error('Environment variable DB_URL missing');
+throw new Error('Environment variable DATABASE_URL missing');
 
 const params = url.parse(process.env.DB_URL);
 const [username, password] = params.auth.split(':');
-console.log("Before parse:", process.env.DB_URL);
-console.log("Params:", params);
 
 const options = {
   host: params.hostname,
