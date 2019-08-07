@@ -1,6 +1,5 @@
 const { readFile } = require('fs');
 const path = require('path');
-const qs = require('qs');
 
 const serverError = (err, response) => {
     response.writeHead(500, 'Content-Type:text/html');
