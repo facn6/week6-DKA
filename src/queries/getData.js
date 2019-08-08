@@ -10,26 +10,6 @@ const getData = cb => {
   });
 };
 
-const getCategories = cb => {
-    databaseConnection.query('SELECT name FROM category', (err, res) => {
-      if (err) {
-        cb(err);
-      } else {
-        cb(null, res.rows);
-      }
-    });
-  };
-  
-  const getLocation = cb => {
-    databaseConnection.query('SELECT name FROM location', (err, res) => {
-      if (err) {
-        cb(err);
-      } else {
-        cb(null, res.rows);
-      }
-    });
-  };
-  
 
  
 

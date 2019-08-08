@@ -1,6 +1,6 @@
 const {
     homeHandler,
-    
+    postEventHandler,
     publicHandler,
     errorHandler
   } = require('./handlers');
@@ -13,7 +13,9 @@ const {
     
     } else if (url.includes('public')) {
       publicHandler(url, response);
-    } else {
+    }else if (url === '/create-event') {
+      postEventHandler(request, response);
+     } else {
       errorHandler(response);
     }
   };
