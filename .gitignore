@@ -59,6 +59,7 @@ typings/
 # dotenv environment variables file
 .env
 src/config.env
+config.env
 
 # next.js build output
 .next

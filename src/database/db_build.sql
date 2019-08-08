@@ -1,39 +1,44 @@
 BEGIN;
-
 DROP TABLE IF EXISTS event CASCADE;
-DROP TABLE IF EXISTS category CASCADE;
-DROP TABLE IF EXISTS location CASCADE;
-
 
 CREATE TABLE event (
 id SERIAL PRIMARY KEY,
 name VARCHAR(100) NOT NULL,
 description VARCHAR(500),
-event_date DATE,
+eventDate DATE,
 interested int,
-category_id int,
-location_id int
-);
-
-CREATE TABLE category (
-id SERIAL PRIMARY KEY,
-category_name varchar(100) NOT NULL
-);
-
-CREATE TABLE location (
-id SERIAL PRIMARY KEY,
-location_name VARCHAR(100) NOT NULL
+category VARCHAR,
+location VARCHAR
 );
 
 
+INSERT INTO event(name, category, location) VALUES
+('meeting', 'telaviv', 'fun'),
+('party', 'nazareth', 'boring'),
+('research', 'smea', 'shit'),
+('presentation', 'harutzim', 'good'),
+('workshop', 'paris','nice');
 
 
-INSERT INTO category(category_name) VALUES
-('meeting'),
-('popular'),
-('research'),
-('presentation'),
-('workshop');
-
+-- INSERT INTO event(eventDate) VALUES
+-- ('2019-08-15'),
+-- ('2019-08-16'),
+-- ('2019-06-15'),
+-- ('2019-07-15'),
+-- ('2019-10-11');
+--
+-- INSERT INTO event(interested) VALUES
+-- (1),
+-- (5),
+-- (1),
+-- (3),
+-- (22);
+--
+-- INSERT INTO event(category) VALUES
+-- ('party'),
+-- ('something'),
+-- ('Smea'),
+-- ('Harutzim'),
+-- ('Paris');
 
 COMMIT;

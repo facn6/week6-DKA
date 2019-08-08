@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Enevt App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -10,47 +9,45 @@
     <link rel="stylesheet" href="public/main.css">
 </head>
 
-<body>
+  <body>
     <div class="navbar">
-        <a href="#home">Date
-            <input type="date" >
-        </a>
-        <div class="dropdown">
-            <button class="Cdropbtn" onclick="getCatagories()">Catagory
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" id="catagoryDropDown">
-              <a href="#">C1</a>
-              <a href="#">C2</a>
-              <a href="#">C3</a>
-            </div>
-            </div> 
-        <div class="dropdown">
-        <button class="Ldropbtn" onclick="getLocation()">Location
-          <i class="fa fa-caret-down"></i>
+      <a href="#home">Date <input type="date" /> </a>
+      <div class="dropdown">
+        <button class="Cdropbtn" onclick="getCatagories()">
+          Catagory <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="catagoryDropDown">
+          <a href="#">C1</a> <a href="#">C2</a> <a href="#">C3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="Ldropbtn" onclick="getLocation()">
+          Location <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="locationDropDown">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
+          <a href="#">1</a> <a href="#">2</a> <a href="#">3</a>
         </div>
-        </div> 
       </div>
-      <div class="card">
-          <h4 id="h4"></h4> 
-        <div class="container" id="container">
-        
+    </div>
+    <div class="card">
+      <div class="container">
+        <h4><b>Events Cards</b></h4>
+        <span style="font-size: 3em; color: Tomato;">
+          <i class="far fa-calendar-plus"></i>
+        </span>
+      </div>
+    </div>
+
           <form id="add-event" class="formAddEvent">
             <span style="font-size: 3em; color: Tomato;">
               <i class="far fa-calendar-plus"></i>
           </span>
           </form>
-         
+
 
         </div>
       </div>
       <script type="text/javascript" src="./public/dom.js"></script>
     <script type="text/javascript" src="./public/app.js"></script>
-</body>
-
+  </body>
 </html>
