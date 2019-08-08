@@ -34,7 +34,5 @@ const getSelectData = (dat, cat, loc, cb) => {
 
 module.exports = {
   getData,
-  getCategories,
-  getLocation,
   getSelectData
 };

@@ -86,9 +86,11 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
 
   [type="date"] {
   background:#ccc url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+
 }
 [type="date"]::-webkit-inner-spin-button {
   display: none;
+
 }
 [type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
@@ -103,6 +105,102 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
   font-weight: normal;
   border-radius: 6px;
 
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Full-width input fields */
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+/* Extra styles for the cancel button */
+.addEventbtn {
+  padding: 14px 20px;
+  background-color: #20c51b;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .addEventbtn {
+  float: left;
+  width: 50%;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+.dropDown{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+  }
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .addEventbtn {
+     width: 100%;
+  }
 }
 
 

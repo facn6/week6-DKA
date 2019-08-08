@@ -1,3 +1,7 @@
+var addEvent = document.getElementById("addEvent");
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
 function getLocation() {
   document.getElementById("locationDropDown").classList.toggle("show");
 }
@@ -11,13 +15,36 @@ window.onclick = function(e) {
     if (catagoryDropDown.classList.contains("show")) {
       catagoryDropDown.classList.remove("show");
     }
-  } else if (!e.target.matches(".Ldropbtn")) {
-    var locationDropDown = document.getElementById("locationDropDown");
-    if (locationDropDown.classList.contains("show")) {
-      locationDropDown.classList.remove("show");
-    }
   }
+}// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var addEvent = document.getElementById("add-event");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+  addEvent.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }else if (!e.target.matches(".Ldropbtn")) {
+      var locationDropDown = document.getElementById("locationDropDown");
+      }else if (locationDropDown.classList.contains("show")) {
+        locationDropDown.classList.remove("show");
+      }
 };
+
 
 function getValuesSelected() {
   // var dateOfEvent = document.getElementById("a").value;
@@ -41,3 +68,5 @@ function getValuesSelected() {
 }
 
 getValuesSelected();
+
+

@@ -2,6 +2,7 @@ const {
   homeHandler,
   publicHandler,
   errorHandler,
+  postEventHandler,
   selectionHandler,
   handleIcon
 } = require("./handlers");
@@ -26,7 +27,9 @@ const router = (request, response) => {
     selectionHandler(request, response);
   } else if (endPoint === "/public/node-icon.ico") {
     handlers.handleIcon(res);
-  } else {
+  }else if (url === '/create-event') {
+    postEventHandler(request, response);
+   }else {
     errorHandler(response);
   }
 };
