@@ -12,33 +12,11 @@ location VARCHAR
 );
 
 
-INSERT INTO event(name, category, location) VALUES
-('meeting', 'telaviv', 'fun'),
-('party', 'nazareth', 'boring'),
-('research', 'smea', 'shit'),
-('presentation', 'harutzim', 'good'),
-('workshop', 'paris','nice');
-
-
--- INSERT INTO event(eventDate) VALUES
--- ('2019-08-15'),
--- ('2019-08-16'),
--- ('2019-06-15'),
--- ('2019-07-15'),
--- ('2019-10-11');
---
--- INSERT INTO event(interested) VALUES
--- (1),
--- (5),
--- (1),
--- (3),
--- (22);
---
--- INSERT INTO event(category) VALUES
--- ('party'),
--- ('something'),
--- ('Smea'),
--- ('Harutzim'),
--- ('Paris');
+INSERT INTO event(name, category, location, description, eventDate, interested) VALUES
+('team meetup','meeting', 'telaviv', 'will be talking about the new project', '2019-08-15', 0),
+('happy hour','activity', 'nazareth', 'free beer and snacks', '2019-09-23', 0),
+('node.js','research', 'smea', 'getting to know node.js better', '2019-09-18', 0),
+('present weekly projects','presentation', 'harutzim', 'please bring your laptops to cast', '2019-10-09', 0),
+('react','workshop', 'haifa', 'hands-on react tutorial', '2019-10-12', 0);
 
 COMMIT;

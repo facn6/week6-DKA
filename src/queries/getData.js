@@ -2,7 +2,7 @@ const databaseConnection = require("../database/db_connection.js");
 var SQL = require("sql-template-strings");
 
 const getData = cb => {
-  databaseConnection.query("SELECT * FROM events", (err, res) => {
+  databaseConnection.query("SELECT * FROM event", (err, res) => {
     if (err) {
       cb(err);
     } else {
