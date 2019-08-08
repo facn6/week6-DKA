@@ -19,6 +19,8 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border-radius: 6px;
+
   }
   
   .dropdown {
@@ -27,7 +29,8 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
   }
   
   .dropdown .Cdropbtn, .dropdown .Ldropbtn {
-      
+    border-radius: 6px;
+
     cursor: pointer;
     font-size: 16px;  
     border: none;
@@ -40,7 +43,8 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
   }
   
   .navbar a:hover, .dropdown:hover .Cdropbtn, .Cdropbtn:focus, .dropdown:hover .Ldropbtn, .Ldropbtn:focus {
-    background-color:   Tomato;
+    background-color:   rgb(187, 77, 60);
+
 
   }
   
@@ -71,21 +75,13 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
   .show {
     display: block;
   }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 100%;
-  }
   
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
   
   .container {
     padding: 2px 16px;
   }
   h4{
-      color:#ccc
+      color:rgb(187, 77, 60);
   }
 
   [type="date"] {
@@ -98,6 +94,17 @@ background: linear-gradient(to bottom, rgb(65, 63, 64), rgb(27, 26, 26), rgb(68,
 }
 [type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
+
+}
+.time{
+
+  position: absolute;
+  right: 70px;
+  color:rgb(187, 77, 60);
+  font-size: 15px;
+  font-weight: normal;
+  border-radius: 6px;
+
 }
 
 /* The Modal (background) */
@@ -196,3 +203,24 @@ button:hover {
   }
 }
 
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgb(187, 77, 60);
+  transition: 0.3s; 
+  background-color:rgb(65, 63, 60);
+  border-radius: 15px;
+
+}
+
+span{
+  color:#ccc;
+  margin-left: 10px;
+}
+ul{
+  list-style-type: none;
+
+}

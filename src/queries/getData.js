@@ -18,7 +18,5 @@ const getData = cb => {
 
 
 module.exports ={
-    getData ,
-    getCategories,
-    getLocation,
+    getData 
 };
