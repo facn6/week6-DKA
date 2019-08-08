@@ -58,11 +58,9 @@ function getValuesSelected() {
     `/selection?dateOfEvent=${dateOfEvent}?category=${category}?location=${location}`
   )
     .then(function(response) {
-      console.log(response);
       return response.json();
     })
     .then(function(parsed) {
-      console.log(parsed);
       var results = parsed;
     });
 }

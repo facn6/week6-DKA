@@ -190,11 +190,7 @@ button:hover {
 .container {
   padding: 16px;
 }
-.dropDown{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%;
-  }
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
@@ -223,4 +219,8 @@ span{
 ul{
   list-style-type: none;
 
+}
+
+.location-input{
+  margin-top:-8%;
 }

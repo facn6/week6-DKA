@@ -15,7 +15,6 @@ const homeHandler = response => {
   const filepath = path.join(__dirname, "..", "public", "index.html");
   readFile(filepath, (err, file) => {
     if (err) return serverError(err, response);
-    // console.log("inside the handler");
     response.writeHead(200, { "Content-Type": "text/html" });
     response.end(file);
   });
@@ -40,7 +39,6 @@ const postEventHandler = (request, response) => {
   let data = '';
   request.on('data', chunk => {
     data += chunk;
-    console.log("data&&&&&&&&&&&&&&&&&&&&&&&&",data);
   });
   request.on('end', () => {
     const {event, description, event_date, interested, category, location } = qs.parse(data);
@@ -60,15 +58,10 @@ const errorHandler = response => {
 };
 
 const selectionHandler = (req, response) => {
-  // console.log(req);
   const path = url1.parse(req.url).path;
   const dat = path.split("?")[1].split("=")[1];
-  // console.log(path);
-  console.log(dat);
   const cat = path.split("?")[2].split("=")[1];
-  console.log(cat);
   const loc = path.split("?")[3].split("=")[1];
-  console.log(loc);
 
   getSelectData(dat, cat, loc, (err, res) => {
     if (err) {
