@@ -1,33 +1,67 @@
 BEGIN;
-CREATE TABLE "event" (
-"id" SERIAL PRIMARY KEY,
-"name" VARCHAR(100) NOT NULL,
-"description" TEXT(500),
-"date" DATE,
-"interested" int,
-"category_id" int,
-"location_id" int
+DROP TABLE IF EXISTS event CASCADE;
+
+-- CREATE TABLE event (
+-- id SERIAL PRIMARY KEY,
+-- name VARCHAR (100),
+-- location VARCHAR (100),
+-- description VARCHAR (100),
+-- eventDate DATE,
+-- interested int,
+-- category VARCHAR(100),
+-- );
+
+DROP TABLE IF EXISTS event CASCADE;
+
+
+CREATE TABLE event (
+id SERIAL PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+description VARCHAR(500),
+eventDate DATE,
+interested int,
+category VARCHAR,
+location VARCHAR
 );
 
-CREATE TABLE "category" (
-"id" SERIAL PRIMARY KEY,
-"name" varchar(100) NOT NULL
-);
 
-CREATE TABLE "location" (
-"id" SERIAL PRIMARY KEY,
-"name" varchar(100) NOT NULL
-);
+INSERT INTO event(name, category, location) VALUES
+('meeting', 'telaviv', 'fun'),
+('party', 'nazareth', 'boring'),
+('research', 'smea', 'shit'),
+('presentation', 'harutzim', 'good'),
+('workshop', 'paris','nice');
 
+-- INSERT INTO event(location) VALUES
+-- ('TelAviv'),
+-- ('Nazareth'),
+-- ('Smea'),
+-- ('Harutzim'),
+-- ('Paris');
+-- --
+-- INSERT INTO event(description) VALUES
+-- ('fun'),
+-- (
 
-
-
-INSERT INTO category(name) VALUES
-('meeting'),
-('party'),
-('research'),
-('presentation'),
-('workshop');
-
+-- INSERT INTO event(eventDate) VALUES
+-- ('2019-08-15'),
+-- ('2019-08-16'),
+-- ('2019-06-15'),
+-- ('2019-07-15'),
+-- ('2019-10-11');
+--
+-- INSERT INTO event(interested) VALUES
+-- (1),
+-- (5),
+-- (1),
+-- (3),
+-- (22);
+--
+-- INSERT INTO event(category) VALUES
+-- ('party'),
+-- ('something'),
+-- ('Smea'),
+-- ('Harutzim'),
+-- ('Paris');
 
 COMMIT;

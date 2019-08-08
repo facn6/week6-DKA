@@ -6,5 +6,6 @@ console.log("Check sql:", sql);
 
 
 dbConnection.query(sql, (err, results) => {
+  console.log(err);
 console.log("DB created with the results:", results)
 });
