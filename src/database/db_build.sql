@@ -1,19 +1,6 @@
 BEGIN;
 DROP TABLE IF EXISTS event CASCADE;
 
--- CREATE TABLE event (
--- id SERIAL PRIMARY KEY,
--- name VARCHAR (100),
--- location VARCHAR (100),
--- description VARCHAR (100),
--- eventDate DATE,
--- interested int,
--- category VARCHAR(100),
--- );
-
-DROP TABLE IF EXISTS event CASCADE;
-
-
 CREATE TABLE event (
 id SERIAL PRIMARY KEY,
 name VARCHAR(100) NOT NULL,
@@ -32,16 +19,6 @@ INSERT INTO event(name, category, location) VALUES
 ('presentation', 'harutzim', 'good'),
 ('workshop', 'paris','nice');
 
--- INSERT INTO event(location) VALUES
--- ('TelAviv'),
--- ('Nazareth'),
--- ('Smea'),
--- ('Harutzim'),
--- ('Paris');
--- --
--- INSERT INTO event(description) VALUES
--- ('fun'),
--- (
 
 -- INSERT INTO event(eventDate) VALUES
 -- ('2019-08-15'),
