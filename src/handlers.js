@@ -74,6 +74,9 @@ const selectionHandler = (req, response) => {
       response.end(output);
     }
   });
+
+  
+
 };
 
 const handleIcon = response => {
