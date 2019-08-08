@@ -76,7 +76,6 @@
     var EventListNode = document.createElement("ul");
 
     state.forEach(function(event) {
-      console.log("insde the foreach of cerating nodes");
       EventListNode.appendChild(createEventNode(event));
     });
 
